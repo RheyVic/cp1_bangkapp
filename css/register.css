@@ -1,0 +1,274 @@
+/*starts General design*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+    --main-color:#006CA5;
+    --black:#222;
+    --white:#fff;
+    --light-black:#D0D0D0;
+    --light-white:#fff9;
+    --dark-bgrgba:0,0,0,.7;
+    --light-bg:#eee;
+    --dark-color:#1b182b;
+    --border:.1rem solid var(--light-black);
+    --border1:.1rem solid var(--light-white);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+section{
+    padding: 5rem 10%;
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+#menu-btn{
+    color: var(--white);
+    font-size: 2.5rem;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.btn{
+    display: inline-block;
+    background-color: var(--main-color);
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--main-color);
+}
+
+.btn:hover{
+    background: var(--main-color);
+}
+
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 5rem 20rem 0rem 20rem;
+}
+
+.container .left img{
+    float: right;
+    width: 45%;
+    height: 50%;
+    text-align: right;
+    background-size:cover;
+}
+
+.container .right img{
+    float: left;
+    width: 40%;
+    height: 50%;
+    text-align: left;
+    background-size:cover;
+    
+}
+
+.container .right .logo{
+    width: 50%;
+    
+}
+
+
+.container .right .formBox{
+    width: 100%;
+    padding: 50px 5%;
+    height: 100%;
+    box-sizing: var(--border);
+}
+
+.container .right .formBox input{
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    border: var(--border);
+    padding: 1rem 10rem 1rem;
+    padding-left: 1rem;
+    border-radius: 10px;
+}
+
+.container .right .formBox .input1{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border: var(--border);
+    padding: 1rem 10rem 1rem;
+    padding-left: 1rem;
+    padding-right: 35rem;
+    border-radius: 10px;
+}
+
+.container .right .formBox .input2{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border: var(--border);
+    padding: 1rem 10rem 1rem;
+    padding-left: 1rem;
+    padding-right: 11rem;
+    border-radius: 10px;
+}
+
+
+.title{
+    padding: 50px 220px 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.container .right .formBox .btn{
+    font-size: 1rem;
+    border: var(--border);
+    padding: 1 rem 10rem 1rem;
+    padding-left: 25rem;
+    padding-right: 11rem;
+    border-radius: 10px;
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: var(--light-black);
+}
+
+
+.container .right .formBox .btn:hover{
+    background-color: var(--main-color);
+    transition: .2s;
+    color: var(--white);
+}
+
+.container .right .formBox [type="submit"]{
+    border: none;
+    text-align: center;
+    padding-left: 17rem;
+}
+
+.container .right .formBox .submit{
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 18rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    margin-top: -1.3rem;
+}
+
+.container .right .formBox .submit a{
+    color: var(--black);
+}
+
+.container .right .formBox .register{
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 18rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-top: 1rem;
+}
+
+.container .right .formBox .register span a:hover{
+    color: var(--black);
+}
+
+.container .right .formBox .register span a{
+    color: var(--main-color);
+}
+
+.option p{
+    font-size: 1rem;
+    padding-left: 10rem;
+    padding-right: 18rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-left: 8rem;
+}
+
+.button .google button{
+    margin-top: 1rem;
+    padding: 6px 200px;
+}
+
+.button .facebook button{
+    margin-top: 0rem;
+    padding: 6px 190px;
+}
+
+.button button{
+    top: 50%;
+    left: 50%;
+    border: none;
+    color: var(--main-color);
+    padding: 6px 110px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+    background: transparent;
+    border: 1.1px solid var(--main-color);
+    border-radius: 5px;
+}
+
+.button .google{
+    padding-bottom: 2rem;
+}
+
+.button button:hover{
+    background-color: var(--light-black);
+    transition: .2s;
+    color: var(--main-color);
+    border: none;
+}
+
+.button .google a i {
+    color: var(--main-color);
+    margin-right: 60px;
+}
+
+
+.button .facebook a i {
+    color: var(--main-color);
+    margin-right: 60px;
+}
+
+.credit{
+    font-size: 150%;
+    padding-top: 8rem;
+    color: var(--light-black);
+}

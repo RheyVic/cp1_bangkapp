@@ -1,0 +1,319 @@
+/*starts General design*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+    --main-color:		#088F8F;
+    --black:#fff;
+    --white:#fff;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bgrgba:0,0,0,.7;
+    --light-bg:#eee;
+    --dark-color:#1b182b;
+    --border:.1rem solid var(--black);
+    --border2:.1rem solid var(--main-color);
+    --border1:.1rem solid var(--light-white);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+section{
+    padding: 5rem 10%;
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+/*ends General design*/
+
+/* starts Header Design */
+
+.profile {
+  position: relative;
+  display: inline-block;
+}
+
+.container1 .dropdown {
+  position: relative;
+  width: 280px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.profile-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-btn img {
+  height: 40px; 
+  width: 40px; 
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.dropdown-btn span {
+  margin-right: 10px;
+}
+
+.dropdown-btn i {
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-btn i.fa-caret-down {
+  display: none;
+}
+
+.dropdown:hover .dropdown-btn i.fa-caret-up {
+  display: inline;
+}
+
+.btn{
+  display: inline-block;
+  background-color: var(--main-color);
+  margin-top: 1rem;
+  color: var(--white);
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: var(--main-color);
+}
+
+
+/*dsada*/
+
+.container .profile img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.container .profile h3{
+  margin:5px 0;
+  font-size: 20px;
+  color:var(--black);
+}
+
+.container .profile p{
+  margin-top: 20px;
+  color:var(--black);
+  font-size: 20px;
+}
+
+.container .profile p a{
+  color:var(--red);
+}
+
+.container .profile p a:hover{
+  text-decoration: underline;
+}
+
+.header {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background-color: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    box-shadow: var(--box-shadow);
+}
+
+.navbar-color{
+    background: #DBE9F4;
+    transition: .5s;
+}
+
+.header .logo img{
+    height: 5rem;
+    margin-bottom: rem;
+    cursor: pointer;
+    filter: var();
+}
+
+.header .logo i{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.header .logo i:hover{
+    color: var(light);
+    transition: .2s;
+}
+
+.header .menu a{
+    font-size: 20px;
+    color: var(--black);
+    padding: 0 15px;
+    font-family: FreeSans;
+    font-weight: 500;
+}
+
+.header .menu a:hover{
+    color: var(--main-color);
+    transition: .5s;
+}
+
+.header .menu button{
+    top: 50%;
+    left: 50%;
+    border: none;
+    color: var(--black);
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+    background: transparent;
+    border: 1.1px solid var(--main-color);
+    border-radius: 10px;
+}
+
+.header .menu .Sign_in button{
+    color: white;
+}
+
+.header .menu .Sign_in button{
+    background-color: var(--main-color);
+}
+
+.header .menu button:hover{
+    color: var(--main-color);
+    transition: .5s;
+}
+
+.header .menu .Sign_in button:hover{
+    background-color: var(--main-color);
+    color: black;
+    background: none;
+    transition: .5s;
+}
+
+.bg1 {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute; /* Ensure it covers the entire page */
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+    background-color: transparent; /* Ensure the header is transparent */
+}
+
+.left{
+    padding-left: 20rem;
+    padding-top: 10rem;
+}
+
+.mission img{
+    height: 5rem;
+}
+
+.text{
+    display: inline-flex;
+}
+
+.right .mission{
+    display: inline-flex;
+}
+
+.right .mission .text .box{
+    background-color: #006DFF;
+    color: #006DFF;
+    width: 2rem;
+    height: 5rem;
+    margin-left: 1rem;
+}
+
+.right .mission .text h1{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    background: linear-gradient(red, yellow);      
+}
